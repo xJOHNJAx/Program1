@@ -7,7 +7,6 @@ public Apple(String name, int size) {
     this.name = name;
     this.size = size;
 }
-
     @Override
     public String toString() {
         return "Apple{" +
