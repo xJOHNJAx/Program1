@@ -1,35 +1,20 @@
 package CarsAndDrivers;
 
-public class Wheel {
-    class Wheel implements Components {
-        private double radius;
-        private Seasonality seasonality;
-        private String name;
+public class Wheel implements CarComponent {
+    private double radius;
+    private Seasonality seasonality;
+    private String name;
 
-        public enum Seasonality {
-            Winter, Summer, AllSeasons
-        }
-
-        public Wheel(double radius, Seasonality seasonality, String name) {
-            this.radius = radius;
-            this.seasonality = seasonality;
-            this.name = name;
-        }
-
-        public double getRadius() {
-            return radius;
-        }
-
-        public Seasonality getSeasonality() {
-            return seasonality;
-        }
+    public Wheel(double radius, Seasonality seasonality, String name) {
+        this.radius = radius;
+        this.seasonality = seasonality;
+        this.name = name;
     }
+
     @Override
-    public String toString() {
-        return "Wheel{" +
-                "radius=" + radius +
-                ", seasonality=" + seasonality +
-                ", name='" + name + '\'' +
-                '}';
+    public void getTheName() {
+        System.out.println("Tyre" + this.radius);
+        System.out.println("seasonality= " + this.seasonality);
+        System.out.println("name= " + this.name);
     }
 }

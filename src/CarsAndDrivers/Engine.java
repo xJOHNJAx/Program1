@@ -1,30 +1,20 @@
 package CarsAndDrivers;
 
-    abstract class Engine implements Components {
-        protected double engineСapacity;
-        protected String fuelType;
-        protected String name;
+abstract class Engine implements CarComponent {
+    protected double engineCapacity;
+    protected String fuelType;
+    protected String engineType;
 
-        public Engine(double engineСapacity, String fuelType, String name) {
-            this.engineСapacity = engineСapacity;
-            this.fuelType = fuelType;
-            this.name = name;
-        }
-
-        public double getEngineСapacity() {
-            return engineСapacity;
-        }
-
-        public String getFuelType() {
-            return fuelType;
-        }
-
-    @Override
-    public String toString() {
-        return "Engine{" +
-                "engineСapacity=" + engineСapacity +
-                ", fuelType='" + fuelType + '\'' +
-                ", name='" + name + '\'' +
-                '}';
+    public Engine(double engineCapacity, String fuelType, String engineType) {
+        this.engineCapacity = engineCapacity;
+        this.fuelType = fuelType;
+        this.engineType = engineType;
     }
-}
+    @Override
+    public void getTheName() {
+        System.out.println("engineCapacity= "+this.engineCapacity);
+        System.out.println("fuelType="+this.fuelType);
+        System.out.println("fuelType="+this.engineType);
+    }
+ }
+

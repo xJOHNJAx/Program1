@@ -2,18 +2,31 @@ package CarsAndDrivers;
 
 public class Car {
     private Engine engine;
-    private Wheel[] wheels;
+    private Tyre[] tyre;
     private int numberOfSeats;
-    private String DriverIsLicenseCategory;
-    private Lock lock;
+    private String driverIsLicenseCategory;
+    private CarLock carLock;
 
-    public Car(Engine engine, Wheel[] wheels, int numberOfSeats, String DriverIsLicenseCategory, Lock lock) {
+    public Car(Engine engine, Tyre[] tyre, int numberOfSeats, String driverIsLicenseCategory, CarLock carLock) {
         this.engine = engine;
-        this.wheels = wheels;
+        this.tyre = tyre;
         this.numberOfSeats = numberOfSeats;
-        this.DriverIsLicenseCategory = DriverIsLicenseCategory;
-        this.lock = lock;
+        this.driverIsLicenseCategory = driverIsLicenseCategory;
+        this.carLock = carLock;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "engine=" + engine +
+                ", tyre=" + Arrays.toString(tyre) +
+                ", numberOfSeats=" + numberOfSeats +
+                ", driverIsLicenseCategory='" + driverIsLicenseCategory + '\'' +
+                ", carLock=" + carLock +
+                '}';
     }
 }
+
+
 
 
