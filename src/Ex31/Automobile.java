@@ -13,6 +13,7 @@ class Automobile implements AutomobileComponent{
         this.seatCount = seatCount;
         this.licenseCategory = licenseCategory;
         this.lock = lock;}
+
         @Override
         public String automobileShowInfo () {
             System.out.println("Объём двигателя: " + this.engine);
